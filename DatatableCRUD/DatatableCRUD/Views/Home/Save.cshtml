@@ -1,0 +1,38 @@
+﻿@model DatatableCRUD.Models.Employee
+@{
+    Layout = null;
+}
+<div class="container-fluid text-center">
+    <h2>@ViewBag.tt</h2>
+</div>
+@using (Html.BeginForm("Save", "Home", FormMethod.Post, new { id = "popupForm" }))
+{
+    if (Model != null && Model.EmployeeID > 0)
+    {
+        @Html.HiddenFor(a => a.EmployeeID)
+    }
+
+    <div class="form-group">
+        <label>First Name</label> @Html.ValidationMessageFor(a => a.FirstName)
+        @Html.TextBoxFor(a => a.FirstName, new { @class = "form-control", placeholder = "Enter First Name" })
+    </div>
+    <div class="form-group">
+        <label>Last Name</label> @Html.ValidationMessageFor(a => a.LastName)
+        @Html.TextBoxFor(a => a.LastName, new { @class = "form-control", placeholder = "Enter Last Name" })
+    </div>
+    <div class="form-group">
+        <label>Email</label> @Html.ValidationMessageFor(a => a.Email)
+        @Html.TextBoxFor(a => a.Email, new { @class = "form-control", placeholder = "Enter Email" })
+    </div>
+    <div class="form-group">
+        <label>City</label> @Html.ValidationMessageFor(a => a.City)
+        @Html.TextBoxFor(a => a.City, new { @class = "form-control", placeholder = "Enter City" })
+    </div>
+    <div class="form-group">
+        <label>Country</label> @Html.ValidationMessageFor(a => a.Country)
+        @Html.TextBoxFor(a => a.Country, new { @class = "form-control", placeholder = "Enter Country" })
+    </div>
+    <div>
+        <input type="submit" value="Save" class="btn btn-block btn-success"/>
+    </div>
+}

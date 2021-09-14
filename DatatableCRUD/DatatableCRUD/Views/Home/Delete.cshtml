@@ -1,0 +1,29 @@
+﻿@model DatatableCRUD.Models.Employee
+@{
+    Layout = null;
+}
+<div class="container-fluid text-center">
+    <h2>Delete Employee</h2>
+</div>
+@using (Html.BeginForm("Delete", "Home", FormMethod.Post, new { id = "popupForm" }))
+{
+    @Html.HiddenFor(a => a.EmployeeID)
+    <div class="form-group">
+        <b>First Name:</b> @Model.FirstName
+    </div>
+    <div class="form-group">
+        <b>Last Name:</b> @Model.LastName
+    </div>
+    <div class="form-group">
+        <b>Email:</b> @Model.Email
+    </div>
+    <div class="form-group">
+        <b>City:</b> @Model.City
+    </div>
+    <div class="form-group">
+        <b>Country:</b> @Model.Country
+    </div>
+    <div>
+        <input type="submit" value="Delete" class="btn btn-block btn-danger"/>
+    </div>
+}
