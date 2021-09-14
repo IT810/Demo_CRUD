@@ -1,6 +1,7 @@
 # Full CRUD operation using datatables in ASP.NET MVC.
-- Demo:
-![image](https://user-images.githubusercontent.com/55732539/133240348-2a89f2b6-9810-426a-9bbf-ab476a020f64.png)
+# Demo:
+
+# ![image](https://user-images.githubusercontent.com/55732539/133240348-2a89f2b6-9810-426a-9bbf-ab476a020f64.png)
 
 ![image](https://user-images.githubusercontent.com/55732539/133240487-6a5d2c1d-2005-4f09-8574-f1d71536705b.png)
 
